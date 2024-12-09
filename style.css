@@ -124,7 +124,7 @@ background-color: #F8F8F8;
 cursor: pointer;
 }
 
-button.list:hover{
+button.list.active{
 border: 2px solid #b8ffec;
 border-radius: 6px;
 width: 246px;
