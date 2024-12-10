@@ -1,5 +1,5 @@
 @font-face {
-  font-family:"TTLakes";
+  font-family: "TTLakes";
   font-weight: 700;
   src: url(fonts/TTLakes-Bold.woff);
   font-style: normal;
@@ -7,15 +7,15 @@
 }
 
 @font-face {
-  font-family:"TTLakes";
+  font-family: "TTLakes";
   font-weight: 400;
   src: url(fonts/TTLakes-Regular.woff);
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {    
-  font-family:"TTLakes";
+@font-face {
+  font-family: "TTLakes";
   font-weight: 500;
   src: url(fonts/TTLakes-Medium.woff);
   font-style: normal;
@@ -25,23 +25,28 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body{
+body {
+  max-width: 1120px;
   width: 100%;
+  align-content: center;
   padding: 0;
   margin-left: 0;
   margin: 0;
   font-family: "TTLakes";
   background-color: #f8f8f8;
 }
-header{
+header {
+  border-bottom:1px solid #d9fff5;
   background-color: #ffffff;
 }
 
-.burger-button{
+.burger-button {
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
@@ -49,7 +54,7 @@ header{
   align-items: center;
 }
 
-.user-set{
+.user-set {
   display: flex;
   justify-content: flex-end;
   border-left: 2px solid rgba(196, 184, 187, 0.747);
@@ -60,7 +65,7 @@ header{
   align-items: center;
 }
 
-.user-status{
+.user-status {
   display: flex;
   justify-content: space-around;
   width: 15%;
@@ -68,33 +73,30 @@ header{
   padding: 0;
 }
 
-.user-status__list{
+.user-status__list {
   margin-left: 5px;
 }
 
-
-.user-set__list{
+.user-set__list {
   margin-left: 5px;
-
 }
 
-.logo{
+.logo {
   margin-right: auto;
 }
 
-.profile-button{
+.profile-button {
   padding-right: 5%;
 }
 
-
-.list{
+.list {
   padding: 5px;
   white-space: nowrap;
   margin: 0;
   margin-bottom: 30px;
 }
 
-.main-box{
+.main-box {
   padding-top: 10px;
   height: 100vh;
   padding-left: 25px;
@@ -102,112 +104,98 @@ header{
   background-color: #f8f8f8;
 }
 
-.menu-list{
+.menu-list {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
   justify-content: space-between;
-  overflow: scroll ;
+  overflow: scroll;
 }
 
-button.list{
-font-family: TTlakes;
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: -0.01em;
-color: #7e7e82;
-width: 246px;
-height: 40px;
-border: none;
-background-color: #F8F8F8;
-cursor: pointer;
+button.list {
+  font-family: TTlakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #7e7e82;
+  width: 246px;
+  height: 40px;
+  border: none;
+  background-color: #f8f8f8;
+  cursor: pointer;
 }
 
-button.list.active{
-border: 2px solid #b8ffec;
-border-radius: 6px;
-width: 246px;
-height: 40px;
-background: #fff;
+button.list.active {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+  width: 246px;
+  height: 40px;
+  background: #fff;
 }
 
-button.scroll__button{
-font-family: "TTlakes";
-font-weight: 700;
-border: none;
-width: 132px;
-height: 24px;
-background-color: #f8f8f8;
-cursor: pointer;
-}
-
-.heading{
+.heading {
   font-size: 30px;
 }
 
-.heading::before{
+.heading::before {
   content: "ff";
-  color: #41F6D7;
+  color: #41f6d7;
   display: block;
-  background-color: #41F6D7;
+  background-color: #41f6d7;
   position: absolute;
   margin-left: -45px;
   border-radius: 10px;
 }
-.main-box__heading-line{
+.main-box__heading-line {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.heading-line-item{
+.heading-line-item {
   display: none;
 }
 
-.main-box__heading-line a{
+.main-box__heading-line a {
   margin: 5px;
 }
 
-.submit-link{
+.submit-link {
   color: black;
-  text-decoration: none
+  text-decoration: none;
 }
 
-.repair-status-link{
+.repair-status-link {
   color: black;
-  text-decoration: none
+  text-decoration: none;
 }
 
-
-.heading{
-  margin-right: auto ;
+.heading {
+  margin-right: auto;
 }
 
-
-.detailed-information{
+.detailed-information {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
-.detailed-information__text{
+.detailed-information__text {
   padding: 0;
   margin: 0;
   flex: 1;
 }
 
-.detailed-information__img{
+.detailed-information__img {
   width: 40%;
   height: 40%;
   padding: 0;
   margin: 0;
   object-fit: contain;
-
 }
 
-p{
+p {
   font-family: "TTlakes";
   min-width: 25vh;
   max-height: 30vh;
@@ -219,69 +207,76 @@ p{
   color: #1b1c21;
 }
 
-.scroll{
+.scroll__button {
   display: flex;
   justify-content: flex-start;
-  margin-top: 10px;
+  margin: 16px;
   font-weight: 500;
+  font-family: "TTlakes";
+  font-weight: 500;
+  border: none;
+  width: 132px;
+  height: 24px;
+  background-color: #f8f8f8;
+  cursor: pointer;
 }
 
-.scroll__img{
-  max-width: 5%;
-  order: -1
+.scroll__img {
+  max-width: 13%;
+  order: -1;
 }
 
-
-@media (max-width: 501px){
-  .detailed-information{
-      flex-wrap: nowrap;
-      flex-direction: column;
+@media (max-width: 501px) {
+  .detailed-information {
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
-  .call-button, .chat-button, .profile-button{
-      display: none;
-  }
-
-  .user-status{
-      width: 35%;
+  .call-button,
+  .chat-button,
+  .profile-button {
+    display: none;
   }
 
-  .user-set{
-      width: 50%
+  .user-status {
+    width: 35%;
   }
 
-  .detailed-information__img{
-      align-self: center;
-      width: 116%;
-      height: 114%;
-      padding: 0;
-      margin: 0;
-  }
-  .text{
-      max-height: 13vh
+  .user-set {
+    width: 50%;
   }
 
-  .logo{
-      margin: 0;
+  .detailed-information__img {
+    align-self: center;
+    width: 116%;
+    height: 114%;
+    padding: 0;
+    margin: 0;
   }
-  .menu-list{
+  .text {
+    max-height: 13vh;
+  }
+
+  .logo {
+    margin: 0;
+  }
+  .menu-list {
     overflow: scroll;
   }
-  .user-set{
-      justify-content: center;
-      border-left: none;
+  .user-set {
+    justify-content: center;
+    border-left: none;
   }
-
 }
 
-@media (min-width: 1120px) and (min-height: 535px){
-  .burger-button{
-      display: none;
+@media (min-width: 1120px) and (min-height: 535px) {
+  .burger-button {
+    display: none;
   }
-  .menu-list{
+  .menu-list {
     overflow: hidden;
   }
 
-  .heading-line-item{
-      display: block;
+  .heading-line-item {
+    display: block;
   }
 }
