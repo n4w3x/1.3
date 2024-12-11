@@ -32,42 +32,56 @@ html {
 }
 
 body {
-  max-width: 1120px;
   width: 100%;
-  align-content: center;
   padding: 0;
   margin-left: 0;
   margin: 0;
   font-family: "TTLakes";
   background-color: #f8f8f8;
 }
+.center {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
 header {
-  border-bottom:1px solid #d9fff5;
   background-color: #ffffff;
+  border-bottom: 1px solid #d9fff5;
 }
 
-.burger-button {
+.menu-button-list {
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
-  margin: 0;
+  margin: 0px;
   align-items: center;
+}
+.menu-button-box {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .user-set {
-  display: flex;
-  justify-content: flex-end;
-  border-left: 2px solid rgba(196, 184, 187, 0.747); height: 32px;
-  border-right: 2px solid rgba(196, 184, 187, 0.747); height: 32px;
-  width: 75%;
+  text-align: right;
+  width: 70%;
   padding-left: 10px;
   padding-right: 10px;
-  align-items: center;
+  flex-wrap: nowrap;
+}
+.border-right {
+  padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+.border-left {
+  padding-left: 20px;
+  padding-right: 15px;
 }
 
 .user-status {
-  display: flex;
-  justify-content: space-around;
   width: 15%;
   margin: 0;
   padding: 0;
@@ -80,15 +94,6 @@ header {
 .user-set__list {
   margin-left: 5px;
 }
-
-.logo {
-  margin-right: auto;
-}
-
-.profile-button {
-  padding-right: 5%;
-}
-
 .list {
   padding: 5px;
   white-space: nowrap;
@@ -106,8 +111,6 @@ header {
 
 .menu-list {
   display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
   justify-content: space-between;
   overflow: scroll;
 }
@@ -182,6 +185,7 @@ button.list.active {
 }
 
 .detailed-information__text {
+  position: relative;
   padding: 0;
   margin: 0;
   flex: 1;
@@ -195,9 +199,9 @@ button.list.active {
   object-fit: contain;
 }
 
-p {
+.text {
   font-family: "TTlakes";
-  min-width: 25vh;
+  min-width: 50%;
   max-height: 30vh;
   overflow: hidden;
   font-weight: 400;
@@ -207,25 +211,27 @@ p {
   color: #1b1c21;
 }
 
-.scroll__button {
+.scroll {
   display: flex;
   justify-content: flex-start;
-  margin: 16px;
+  margin-top: 10px;
   font-weight: 500;
   font-family: "TTlakes";
-  border: none;
-  width: 132px;
-  height: 24px;
-  background-color: #f8f8f8;
   cursor: pointer;
 }
 
 .scroll__img {
-  max-width: 13%;
+  max-width: 5%;
   order: -1;
 }
 
-@media (max-width: 501px) {
+@media (max-width: 700px) {
+  .detailed-information {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 530px) {
   .detailed-information {
     flex-wrap: nowrap;
     flex-direction: column;
@@ -252,30 +258,46 @@ p {
     margin: 0;
   }
   .text {
-    max-height: 13vh;
+    max-height: 17vh;
   }
 
   .logo {
     margin: 0;
+    padding-left: 20px;
   }
   .menu-list {
     overflow: scroll;
   }
   .user-set {
     justify-content: center;
-    border-left: none;
+  }
+  .border-left {
+    display: none;
   }
 }
 
 @media (min-width: 1120px) and (min-height: 535px) {
-  .burger-button {
+  .menu-button-list {
     display: none;
-  }
-  .menu-list {
-    overflow: hidden;
   }
 
   .heading-line-item {
     display: block;
+  }
+  .menu-list {
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .center {
+    display: inline-block;
+    max-width: 1120px;
+  }
+}
+@media (max-width: 325px) {
+  .user-set {
+    width: 53%;
   }
 }
