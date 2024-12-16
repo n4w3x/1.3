@@ -298,8 +298,19 @@ a {
     max-width: 1120px;
   }
 }
-@media (max-width: 325px) {
+@media (max-width: 350px) {
   .user-set {
     width: 53%;
+  }
+  .menu-button-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin: 0px;
+    align-items: center;
+  }
+  .logo {
+    margin: 0;
+    padding-left: 16px;
   }
 }
